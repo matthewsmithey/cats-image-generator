@@ -9,12 +9,15 @@ Original file is located at
 #Image Generator from Pre-Trained Model
 """
 
+'''
+# for using in Google Collab
+# comment out for other environments 
 from google.colab import drive
 drive.mount('/content/drive')
-
 import os
 os.chdir('/content/drive/MyDrive/BAN 676 - Deep Learning/Group Project (not shared)')
 print(os.getcwd())
+''' 
 
 # Imports
 from keras.layers import Activation,Dense,Conv2D,UpSampling2D,LeakyReLU, Reshape, Flatten, Input, BatchNormalization,Dropout
@@ -31,7 +34,7 @@ https://www.tensorflow.org/guide/keras/save_and_serialize
 """
 
 from tensorflow import keras
-generator = keras.models.load_model('/content/drive/MyDrive/BAN 676 - Deep Learning/Group Project (not shared)/generator_64_64_z64_final_epoch.h5')
+generator = keras.models.load_model('generator_64_64_z64_final_epoch.h5')
 
 """##Generate Image """
 
